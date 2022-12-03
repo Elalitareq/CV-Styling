@@ -18,8 +18,9 @@ header{
 header>div{
     display: flex;
     padding-left: 50px;
+    justify-content: center;
 }
-@media screen and (min-width:768px) {
+@media screen and (min-width:992px) {
     .content{
     display: flex;
     flex-wrap: wrap;
@@ -35,14 +36,13 @@ header>div{
     .content>section{
         width: 50%;
     }
-    .content>section>*{
-        padding: 10px 20px;
-    }
-    #contact{
+
+    .contacts{
         position: absolute;
         top: 5px;
         right:  0;
         width: 50%;
+        margin-right: 0;
     }
     #contact>h3{
         display: none;
@@ -59,17 +59,21 @@ header>div{
         width: 150px;
         background-color: red;
         color: white;
-        padding: 2px 0;
+        padding: 2px 2px;
         margin: 0;
     }
     .contact-value{
         margin-left: 0;
     }
     
+    
 }
+    .content>section>*{
+        padding: 10px 20px;
+    }
 
     h3{
-        border-bottom: solid #999 1px;
+        border-bottom: solid lightgrey 1px;
         padding-bottom:10px;
     }
     h3::before{
@@ -81,11 +85,9 @@ header>div{
         padding:40px 75px ;
     }
     .experience-type{
-        color: red;
         font-weight: bolder;
     }
     .experience-institution{
-        color: red;
         font-weight: lighter;
     }
     .experience-institution::before{
@@ -95,6 +97,19 @@ header>div{
         color: red;
     }
     h1{
+        color: red;
+    }
+    h4{
+        margin: 0;
+        color: red;
+    }
+    .experience-details{
+        font-size: normal;
+        font-weight: lighter;
+        color: grey;
+        margin: 4px 0 30px 10px;
+    }
+    .experience-date-separator{
         color: red;
     }
     #contact .contact{
@@ -120,40 +135,37 @@ header>div{
     div[data-skill]{
         border: solid 5px lightgrey;
         margin: 3px;
+        padding: 2px 4px;
+        color: white;
     }
     .skills{
         --skill: calc((attr(data-skill number)/10)*100%)
-        
+    
+    }
+    .skills-primary::before{
+        content: "Main";
+    }
+    .skills-secondary::before{
+        content: "Other";
     }
 
+    .skills-primary>div.skill[data-skill="5"]{
+        background: linear-gradient(90deg, red 0%, red 50%, lightgrey 50%,lightgrey 100%);
+    }
+    .skills-primary>div.skill[data-skill="1"]{
+        background: linear-gradient(90deg, red 0%, red 10%, lightgrey 10%,lightgrey 100%);
+    }
+    .skills-primary>div.skill[data-skill="3"]{
+        background: linear-gradient(90deg, red 0%, red 30%, lightgrey 30%,lightgrey 100%);
+    }
+    .skills-secondary>div.skill[data-skill="7"]{
+        background: linear-gradient(90deg, #ff0440 0%, #ff0440 70%, lightgrey 70%,lightgrey 100%);
+    }
+    .skills-secondary>div.skill[data-skill="9"]{
+        background: linear-gradient(90deg, #ff0440 0%, #ff0440 90%, lightgrey 90%,lightgrey 100%);
+    }
 
-    .skills-primary>div.skill[data-skill="5"]{
-        background: linear-gradient(90deg, red 0%, red 50%, lightgrey 50%,lightgrey 100%);
-        padding: 2px 4px;
-        color: white;
+    .skills-secondary>div.skill[data-skill="5"]{
+        background: linear-gradient(90deg, #ff0440 0%, #ff0440 50%, lightgrey 50%,lightgrey 100%);
     }
-    .skills-primary>div.skill[data-skill="5"]{
-        background: linear-gradient(90deg, red 0%, red 50%, lightgrey 50%,lightgrey 100%);
-        padding: 2px 4px;
-        color: white;
-    }
-    .skills-primary>div.skill[data-skill="5"]{
-        background: linear-gradient(90deg, red 0%, red 50%, lightgrey 50%,lightgrey 100%);
-        padding: 2px 4px;
-        color: white;
-    }
-    .skills-primary>div.skill[data-skill="5"]{
-        background: linear-gradient(90deg, red 0%, red 50%, lightgrey 50%,lightgrey 100%);
-        padding: 2px 4px;
-        color: white;
-    }
-    .skills-primary>div.skill[data-skill="5"]{
-        background: linear-gradient(90deg, red 0%, red 50%, lightgrey 50%,lightgrey 100%);
-        padding: 2px 4px;
-        color: white;
-    }
-    .skills-primary>div.skill[data-skill="5"]{
-        background: linear-gradient(90deg, red 0%, red 50%, lightgrey 50%,lightgrey 100%);
-        padding: 2px 4px;
-        color: white;
-    }
+    /* i didn't want to use this i wanted to call the data-skill attribute to my css file but even so i also needed to convert it to percentage so that it could work with linear gradient but didn't find any */
