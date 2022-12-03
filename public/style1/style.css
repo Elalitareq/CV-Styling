@@ -95,9 +95,6 @@ header>div{
         padding: 2px 4px;
         color: white;
     }
-    :root{
-        --skill: calc((attr(data-skill number)/10)*100%)
-    }
     .skills-primary::before{
         content: "Main";
     }
