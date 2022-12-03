@@ -31,17 +31,23 @@ header>div{
     }
     h3::before{
         content: "\01F534  ";
-        font: helvetica;
     }
     
     .experience-type{
         font-weight: bolder;
     }
+    .experience-location::before{
+        content: "in";
+    }
+
     .experience-institution{
         font-weight: lighter;
     }
     .experience-institution::before{
         content: "@ ";
+    }
+    .experience-date::before{
+        content: "on";
     }
     h2{
         color: red;
@@ -59,6 +65,7 @@ header>div{
         color: grey;
         margin: 4px 0 30px 10px;
     }
+
     .experience-date-separator{
         color: red;
     }
@@ -88,9 +95,8 @@ header>div{
         padding: 2px 4px;
         color: white;
     }
-    .skills{
+    :root{
         --skill: calc((attr(data-skill number)/10)*100%)
-    
     }
     .skills-primary::before{
         content: "Main";
