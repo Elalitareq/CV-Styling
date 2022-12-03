@@ -17,8 +17,10 @@ header{
 }
 header>div{
     display: flex;
-    padding-left: 50px;
-    justify-content: center;
+    flex-direction: column;
+    padding: 30px 50px;
+    top: 0;
+    align-items: flex-start;
 }
 @media screen and (min-width:992px) {
     .content{
@@ -26,6 +28,7 @@ header>div{
     flex-wrap: wrap;
     }
     header>div{
+        display: flex;
         flex-direction: row;
         align-items: flex-end;
         width: 50%;
@@ -65,13 +68,16 @@ header>div{
     .contact-value{
         margin-left: 0;
     }
-    
-    
-}
     .content>section>*{
         padding: 10px 20px;
-    }
-
+    }  
+    .content{
+        padding:40px 75px ;
+    }  
+}
+    .content{
+        padding:20px 20px ;
+    }  
     h3{
         border-bottom: solid lightgrey 1px;
         padding-bottom:10px;
@@ -81,9 +87,6 @@ header>div{
         font: helvetica;
     }
     
-    .content{
-        padding:40px 75px ;
-    }
     .experience-type{
         font-weight: bolder;
     }
