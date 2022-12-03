@@ -4,10 +4,12 @@ html{
     background-color: red;
 }
 body{
-    max-width: 1300px;
+    max-width: 992px;
     margin:0 auto;
     background-color: white;
     padding: 50px 150px 30px 150px;
+    position: relative;
+
 
 }
 
@@ -16,12 +18,20 @@ figure img{
     height:200px;
     width: 200px;
 }
+#about{
+    display: flex;
+}
+#competencies{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
 @media only screen and (min-width:768px) {
 
     header h2{
         margin-top: 50px;
         display: none;
-        position: relative;
     }
     header figure{
         rotate: -15deg;
@@ -29,7 +39,26 @@ figure img{
         top: 50px;
         right: 180px;
     }
-
+    #about p{
+        width: 66.6%;
+        text-align: justify;
+        color: gray;
+    }
+    #competencies h3{
+        grid-column: 1;
+        grid-row: 1;
+        border: 1px solid black;
+    }
+    .skills-primary{
+        grid-row: 1;
+        grid-column: 2/5;
+        border: 1px solid black;
+    }    
+    .skills-secondary{
+        grid-row: 2;
+        grid-column: 2/5;
+        border: 1px solid black;
+    }
 }
 header{
     border-bottom: solid 1px lightgrey;
