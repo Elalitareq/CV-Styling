@@ -1,0 +1,39 @@
+html{
+    display: flex;
+    justify-content: center;
+    background-color: red;
+}
+body{
+    max-width: 1300px;
+    margin:0 auto;
+    background-color: white;
+    padding: 50px 150px 30px 150px;
+
+}
+
+
+figure img{
+    height:200px;
+    width: 200px;
+}
+@media only screen and (min-width:768px) {
+
+    header h2{
+        margin-top: 50px;
+        display: none;
+        position: relative;
+    }
+    header figure{
+        rotate: -15deg;
+        position: absolute;
+        top: 50px;
+        right: 180px;
+    }
+
+}
+header{
+    border-bottom: solid 1px lightgrey;
+}
+#about>h3{
+    display: none;
+}
