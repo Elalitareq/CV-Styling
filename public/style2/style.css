@@ -7,7 +7,7 @@ body{
     max-width: 992px;
     margin:0 auto;
     background-color: white;
-    padding: 50px 150px 30px 150px;
+    padding: 50px 120px 30px 120px;
     position: relative;
 
 
@@ -20,7 +20,7 @@ figure img{
 }
 #about{
     display: flex;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 .content>section{
     display: grid;
@@ -34,6 +34,44 @@ header{
 }
 #about>h3{
     display: none;
+}
+.experience-institution{
+    display: none;
+}
+.experience{
+    display: grid;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px;
+    margin-bottom: 40px;
+}
+
+.experience-type{
+    color: darkcyan;
+    font-size: large;
+}
+.experience h4{
+    grid-column: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.experience-details{
+    grid-column: 2/3;
+    justify-self: right;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: grey;
+}
+h4{
+    margin-top: 0;
+}
+.experience-description{
+    grid-column: 1/3;
+    grid-row: 2/4;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: justify;
 }
 
 @media only screen and (min-width:768px) {
@@ -66,10 +104,12 @@ header{
         grid-column: 2/7;
         padding-left: 10px;
         padding-bottom: 10px;
+
     }    
     .experience{
-        grid-column: 2/8;
+        grid-column: 2/9;
         padding-left: 10px;
+
     }
 
 }
