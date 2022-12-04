@@ -1,81 +1,113 @@
-html{
-    display: flex;
-    justify-content: center;
-    background-color: red;
-}
-body{
-    max-width: 992px;
-    margin:0 auto;
-    background-color: white;
-    padding: 50px 120px 30px 120px;
-    position: relative;
-
-
-}
-
-
-figure img{
-    height:200px;
-    width: 200px;
-}
-#about{
-    display: flex;
-    margin-bottom: 80px;
-}
-.content>section{
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 0px;
-    grid-auto-flow: auto;
-    margin-bottom: 40px;
-}
-header{
-    border-bottom: solid 1px lightgrey;
-}
-#about>h3{
-    display: none;
-}
-.experience-institution{
-    display: none;
-}
-.experience{
-    display: grid;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 0px;
-    margin-bottom: 40px;
-}
-
-.experience-type{
-    color: darkcyan;
-    font-size: large;
-}
-.experience h4{
-    grid-column: 1;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-.experience-details{
-    grid-column: 2/3;
-    justify-self: right;
-    margin-top: 0;
-    margin-bottom: 0;
-    color: grey;
-}
-h4{
-    margin-top: 0;
-}
-.experience-description{
-    grid-column: 1/3;
-    grid-row: 2/4;
-    margin-top: 0;
-    margin-bottom: 0;
-    text-align: justify;
-}
-
 @media only screen and (min-width:768px) {
+    html{
+        display: flex;
+        justify-content: center;
+        background-color: red;
+    }
+    body{
+        max-width: 992px;
+        margin:0 auto;
+        background-color: white;
+        padding: 50px 120px 30px 150px;
+        position: relative;
+    }
+    figure img{
+        height:200px;
+        width: 200px;
+    }
+    #about{
+        display: flex;
+        margin-bottom: 80px;
+    }
+    .content>section:not(#contact, #about){
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 0px;
+        grid-auto-rows: auto;
+        margin-bottom: 40px;
+    }
+    header{
+        border-bottom: solid 1px lightgrey;
+    }
+    #about>h3{
+        display: none;
+    }
+    .experience-institution{
+        display: none;
+    }
+    .experience{
+        display: grid;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 0px;
+        margin-bottom: 40px;
+    }
+    .experience-type{
+        color: darkcyan;
+        font-size: large;
+    }
+    .experience h4{
+        grid-column: 1;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .experience-details{
+        grid-column: 2/3;
+        justify-self: right;
+        margin-top: 0;
+        margin-bottom: 0;
+        color: grey;
+    }
+    h4{
+        margin-top: 0;
+    }
+    .experience-description{
+        grid-column: 1/3;
+        grid-row: 2/4;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: justify;
+    }
+    .skills{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        gap: 15px;
+        
+    }
+    .skill{
+        padding: 10px 10px;
+        width: 90%;
+        border-radius: 0px;
+        background-color: darkcyan;
+        color: white;
+        align-content: center;
+        justify-content: space-between;
+        display: flex;
+    }
+    .skill[data-skill="1"]::after{
+        content: "\2605";
+    }
+    .skill[data-skill="3"]::after{
+        content:"\2605 \2605";
+    }
+    .skill[data-skill="5"]::after{
+        content: "\2605 \2605 \2605" ;
+    }
+    .skill[data-skill="7"]::after{
+    content: "\2605 \2605 \2605 \2605" ;
+    }
+    .skill[data-skill="9"]::after{
+        content: "\2605 \2605 \2605 \2605 " ;
+        }
 
+    .skills-primary>.skill{
+        font-size: larger;
+    }
+    .skills-secondary>.skill{
+        font-size: small;
+    }
+    
     header h2{
         margin-top: 50px;
         display: none;
@@ -87,13 +119,13 @@ h4{
         right: 180px;
     }
     #about p{
-        width: 66.6%;
+        width: 62%;
         text-align: justify;
         color: gray;
     }
     .content>section>h3{
         grid-column: 1;
-        grid-row: 1/3;
+        grid-row: 1/4;
         border-right: 2px solid GREY;
         margin-top: 0;
         height: 100%;
@@ -101,15 +133,70 @@ h4{
         font-size: larger;
     }
     .skills{
-        grid-column: 2/7;
-        padding-left: 10px;
-        padding-bottom: 10px;
-
-    }    
+        grid-column: 2/8;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
     .experience{
         grid-column: 2/9;
         padding-left: 10px;
 
     }
-
+    #hobbies>ul{
+        grid-column: 2/8;
+    }
+    .contacts{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: auto 350px auto 150px;
+    }
+    #contact>h3{
+        display: none;
+    }    
+    .contact-type{
+        display: none;
+    } 
+    .contact{
+        width: 100px;
+        height: 100px;
+        display: flex;
+    }
+    .contact>dd{
+        width:100%;
+        height: 100%;
+        margin-left: 0;
+        display: flex;
+    }
+    .contact-skype{
+        display: none;
+    }
+    .contact-github>dd>a{
+        background-image: url(/public/images/github.png);
+        background-size: 100px 100px;
+        width:100%;
+        height: 100%;
+        color: transparent;
+    }
+    .contact-facebook>dd>a{
+        background-image: url(/public/images/facebook.png);
+        background-size: 100px 100px;
+        width:100%;
+        height: 100%;
+        color: transparent  ;
+    }
+    .contact-email>dd>a{
+        background-image: url(/public/images/email.png);
+        background-size: 100px 100px;
+        width:100%;
+        height: 100%;
+        color: transparent  ;
+    }
+    .contact-phone>dd>a{
+        background-image: url(/public/images/phone.png);
+        background-size: 100px 100px;
+        width:100%;
+        height: 100%;
+        color: transparent  ;
+    }
 }
