@@ -1,3 +1,8 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
 html{
     display: flex;
     justify-content: center;
@@ -10,6 +15,7 @@ body{
     background-image: url(/style2-moble-n.png);
     background-position: fixed;
     background-repeat: no-repeat;
+    width: 95%;
 }
 header h1{
     font-size: x-large;
@@ -76,7 +82,7 @@ section>h3{
     display: flex;
 }
 .skills-primary>.skill{
-    font-size: larger;
+    font-size: large;
 }
 .skills-secondary>.skill{
     font-size: smaller;
@@ -173,7 +179,8 @@ content: "\2605 \2605 \2605 \2605" ;
     color: transparent  ;
 }
 .contacts{
-    display: flex;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
 }
 
 .contact-phone>dd>a{

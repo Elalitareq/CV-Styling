@@ -78,7 +78,7 @@ h4{
 }
 .contact{
     display: flex;
-    background-color: while;
+    background-color: white;
 }
 .contact-type{
     width: 150px;
@@ -134,7 +134,7 @@ div[data-skill]{
             flex-direction: row;
             width: 50%;
             justify-content: center;
-            padding: 0 10px 0  40px;
+            padding: 0 10px 0  20px;
         }
         header figure{
             margin-left: 20px;
