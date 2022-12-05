@@ -10,15 +10,11 @@ html{
 body{
     max-width: 1300px;
     margin:0 auto;
-    background-color: white;
-    padding: 20px 20px 30px 10px;
-    background-image: url(/style2-moble-n.png);
-    background-position: fixed;
-    background-repeat: no-repeat;
+    padding: 50px 10px 30px 10px;
     width: 95%;
 }
 header h1{
-    font-size: x-large;
+    font-size: xx-large;
     font-weight: 800;
 }
 header h2{
@@ -50,7 +46,7 @@ figure img{
     display: none;
 }
 section:not(#about){
-    margin-bottom: 100px;
+    margin-bottom: 150px;
     margin-left: 1px;
 }
 section>h3{
@@ -80,12 +76,13 @@ section>h3{
     align-content: center;
     justify-content: space-between;
     display: flex;
+    width: 100%;
 }
 .skills-primary>.skill{
-    font-size: large;
+    font-size: 15px;
 }
 .skills-secondary>.skill{
-    font-size: smaller;
+    font-size: 10px;
 }
 .skill[data-skill="1"]::after{
     content: "\2605";
@@ -110,19 +107,21 @@ content: "\2605 \2605 \2605 \2605" ;
 .experience{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(5, 1fr);
+        grid-template-rows: repeat(6, 1fr);
         gap: 0px;
         margin-bottom: 40px;
+        align-items: center;
 }
 .experience-description{
     grid-column: 1/3;
-    grid-row: 2/6;
+    grid-row: 2/7;
     margin-top: 0;
     margin-bottom: 0;
     text-align: justify;
     margin-right: 5px;
     margin-left: 10px;
     text-align: justify;
+    letter-spacing: 2px;
 }
 .experience h4{
     grid-column: 1;
@@ -135,6 +134,7 @@ content: "\2605 \2605 \2605 \2605" ;
     margin-top: 0;
     margin-bottom: 0;
     color: grey;
+    font-size: small;
 }
 #contact>h3{
     display: none;
@@ -252,5 +252,4 @@ content: "\2605 \2605 \2605 \2605" ;
         justify-content: space-between;
         margin: auto 350px auto 150px;
     }
-
 }
