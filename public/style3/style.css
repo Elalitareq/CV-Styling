@@ -1,149 +1,174 @@
 /* Body and Wrapper */
-body {
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
-  }
-  
-  #wrapper {
-    margin: 0 auto;
-    padding: 20px;
+.another-body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  width: 100vw;
+  display: flex;
+}
+
+#wrapper {
+  min-width: 85vw;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #ffffff;
+}
+.another-wrapper {
+  min-width: 10vw;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+hgroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+h1 {
+  font-size: 36px;
+  margin: 0;
+  color: #0077c2;
+}
+.span {
+  font-size: 36px;
+
+  margin: 0 10px;
+  color: #0077c2;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 0;
+  color: #222222;
+}
+
+/* Competencies */
+.skills {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  align-items: flex-start;
+}
+
+.skills-primary .skill {
+  background-color: #0077c2;
+}
+
+.skills-secondary .skill {
+  background-color: #00a0e8;
+}
+
+.skill {
+  margin-right: 10px;
+  padding: 6px 12px;
+  border-radius: 50px;
+  color: #ffffff;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Experiences */
+.experience {
+  margin-bottom: 15px;
+}
+
+.experience h4 {
+  margin: 0 0 10px 0;
+  color: #0077c2;
+  font-size: 20px;
+}
+
+.experience-type {
+  font-weight: bold;
+}
+
+.experience-institution {
+  font-weight: normal;
+}
+
+.experience-details {
+  margin-bottom: 5px;
+}
+
+.experience-location {
+  margin-right: 10px;
+  color: #222222;
+}
+
+.month,
+.year,
+.day {
+  color: #0077c2;
+}
+
+.experience-description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #222222;
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  text-align: center;
+  color: #222222;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-right: 40px;
+  margin-bottom: 15px;
+  padding: 0;
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+@media print {
+  body {
+    width: 240mm;
+    height: 297mm;
+    margin: 0;
+    padding: 0;
     background-color: #ffffff;
-  }
-  
-  /* Header */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-  }
-  
-  h1 {
-    font-size: 36px;
-    margin: 0;
-    color: #0077c2;
-  }
-  
-  h2 {
-    font-size: 24px;
-    margin: 0;
-    color: #222222;
-  }
-  
-  /* Competencies */
-  .skills {
-    display: flex;
-    margin-bottom: 10px;
-  }
-  
-  .skills-primary .skill {
-    background-color: #0077c2;
-  }
-  
-  .skills-secondary .skill {
-    background-color: #00a0e8;
-  }
-  
-  .skill {
-    margin-right: 10px;
-    padding: 6px 12px;
-    border-radius: 50px;
-    color: #ffffff;
-    font-size: 16px;
-  }
-  
-  /* Experiences */
-  .experience {
-    margin-bottom: 15px;
-  }
-  
-  .experience h4 {
-    margin: 0 0 10px 0;
-    color: #0077c2;
-    font-size: 20px;
-  }
-  
-  .experience-type {
-    font-weight: bold;
-  }
-  
-  .experience-institution {
-    font-weight: normal;
-  }
-  
-  .experience-details {
-    margin-bottom: 5px;
-  }
-  
-  .experience-location {
-    margin-right: 10px;
-    color: #222222;
-  }
-  
-  .month ,
-    .year,
-        .day {
-    color: #0077c2;
-  }
-  
-  .experience-description {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #222222;
-  }
-  
-  /* Footer */
-  footer {
-    margin-top: 30px;
-    text-align: center;
-    color: #222222;
-  }
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-  }
-  
-  li {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-right: 40px;
-    margin-bottom: 15px;
-    padding: 0;
-  }
-  .contacts{
-    display: flex   ;
-    flex-wrap: wrap;
-  }
-  a{
-    text-decoration: none;
     color: #000000;
   }
-  
-  @media print {
-    body {
-      width: 240mm;
-      height: 297mm;
-      margin: 0;
-      padding: 0;
-      background-color: #ffffff;
-      color: #000000;
-    }
-    
-    #wrapper {
-      max-width: 100%;
-      margin: 0;
-      padding: 10mm;
-      box-sizing: border-box;
-    }
-    
-    .skills {
-      margin-bottom: 5mm;
-    }
-    
-    .experience {
-      margin-bottom: 5mm;
-    }
+
+  #wrapper {
+    min-width: 80vw;
+    margin: 0;
+    box-sizing: border-box;
   }
-  
+  .another-wrapper {
+  max-width: 20vw;
+  box-sizing: border-box;
+}
+  .skills {
+    margin-bottom: 5mm;
+  }
+
+  .experience {
+    margin-bottom: 5mm;
+  }
+}
+dd{
+  margin: 0;
+}
